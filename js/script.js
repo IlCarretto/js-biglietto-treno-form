@@ -31,7 +31,7 @@ submitBtn.addEventListener("click", function () {
     console.log(kmPrice, typeof(kmPrice));
 
     // Sconto il risultato in base all'età
-    if (userAge < 18) {
+    if (userAge > 18 ) {
         ticketPrice = kmPrice - (kmPrice * 20 / 100);
         console.log(ticketPrice, typeof(ticketPrice)); 
     } else if (userAge > 65) {

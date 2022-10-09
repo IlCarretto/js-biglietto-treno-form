@@ -5,26 +5,244 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trenitalia Boolean</title>
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Frameworks -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <!-- Custom Styles -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Inputs -->
     <div>
-        <label for="kilometers">Quanti km devi percorrere?</label>
-        <input type="text" id="kilometers">
+        <!-- Inputs -->
+        <!-- <div>
+            <form>
+                <label for="kilometers">Quanti km devi percorrere?</label>
+                <input type="text" id="kilometers" required>
 
-        <label for="user-age">Quanti anni hai?</label>
-        <input type="text" id="user-age">
+                <label for="user-age">Quanti anni hai?</label>
+                <select name="" id="user-age" required>
+                    <option value="18">Maggiorenne</option>
+                    <option value="minorenne">Minorenne</option>
+                    <option value="over65">Over 65</option>
+                </select> -->
+                <!-- Submit -->
+            <!-- <div>
+                <button id="submit">Submit</button>
+            </div>
+            </form>
+        </div> -->
+
+        <!-- Result -->
+        <!-- <h1>Il prezzo del tuo biglietto è ...</h1>
+
+        <script src="js/script.js"></script> -->
     </div>
     
-    <!-- Submit -->
-    <div>
-        <button id="submit">Submit</button>
-    </div>
+    <!-- HEADER -->
+    <header>
+        <div class="header-top">
+            <div class="ms-header-logo">
+                <img src="img/trenitalia-logo.png" alt="">
+            </div>
+            <nav>
+                <ul class="header-list mt-3 text-uppercase fw-semibold">
+                    <li><a href="">Frecce</a></li>
+                    <li><a href="">Intercity e internazionali</a></li>
+                    <li><a href="">Regionale</a></li>
+                    <li><a href="">Offerte</a></li>
+                    <li><a href="">Calcola il mio biglietto</a></li>
+                    <li><a href="">Info e Assistenza</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header-bot">
+            <ul class="header-list">
+                <li>
+                    <span class="ms-circle">
+                    <i class="fa-solid fa-info"></i>
+                    </span>
+                    <span class="info fw-semibold">INFOTRAFFICO</span>
+                </li>
+                <li class="fw-semibold">TRAFFICO REGOLARE SULLA RETE ALTA VELOCITA'</li>
+            </ul>
+        </div>
+    </header>
+    <!-- /HEADER -->
+    
+    <!-- MAIN -->
+    <main class="bg-light">
+        <!-- Ticket Generator Section -->
+        <section class="ticket-generator">
+            <div class="ms-container-small">
+                <h2 class="mb-3">Calcola il tuo biglietto!</h2>
+                <div class="row">
+                    <div class="col-4">
+                        <div class="green square">
+                            <h3>Contatti acquirente</h3>
+                            <div class="row row-cols-2">
+                                <div class="col">
+                                    <form>
+                                        <div class="form-floating mb-3">
+                                            <input type="text" class="form-control" id="floatingInput" placeholder="Nome*">
+                                            <label for="floatingInput">Nome*</label>
+                                        </div>
+                                        <div class="form-floating mb-3">
+                                            <input type="email" class="form-control" id="floatingInput" placeholder="Email Address*">
+                                            <label for="floatingInput">Email Address*</label>
+                                        </div>
+                                        <div class="form-floating mb-3">
+                                            <input type="number" class="form-control" id="floatingInput" placeholder="Contatto telefonico*">
+                                            <label for="floatingInput">Contatto telefonico*</label>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col">
+                                    <form>
+                                        <div class="form-floating mb-3">
+                                            <input type="text" class="form-control" id="floatingInput" placeholder="Cognome*">
+                                            <label for="floatingInput">Cognome*</label>
+                                        </div>
+                                        <div class="form-floating mb-3">
+                                            <input type="email" class="form-control" id="floatingInput" placeholder="Confirm Email*">
+                                            <label for="floatingInput">Confirm Email*</label>
+                                        </div>
+                                        <div class="form-floating mb-3">
+                                            <input type="number" class="form-control" id="floatingInput" placeholder="Codice Fiscale*">
+                                            <label for="floatingInput">Codice Fiscale*</label>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="white square">
+                            <h3>Dati Passeggero</h3>
+                            <div class="row row-cols-2">
+                                <div class="col">
+                                    <form>
+                                        <div class="form-floating mb-3">
+                                            <input type="text" class="form-control" id="floatingInput" placeholder="Nome*">
+                                            <label for="floatingInput">Nome*</label>
+                                        </div>
+                                        <div class="form-floating mb-3">
+                                            <input type="email" class="form-control" id="floatingInput" placeholder="Email Address*">
+                                            <label for="floatingInput">Email Address*</label>
+                                        </div>
+                                        <div class="form-floating mb-3">
+                                            <input type="number" class="form-control" id="floatingInput" placeholder="Cartafreccia">
+                                            <label for="floatingInput">Cartafreccia</label>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col">
+                                    <form>
+                                        <div class="form-floating mb-3">
+                                            <input type="text" class="form-control" id="floatingInput" placeholder="Cognome*">
+                                            <label for="floatingInput">Cognome*</label>
+                                        </div>
+                                        <div class="form-floating mb-3">
+                                            <input type="email" class="form-control" id="floatingInput" placeholder="Confirm Email*">
+                                            <label for="floatingInput">Confirm Email*</label>
+                                        </div>
+                                        <div class="form-floating mb-3">
+                                            <input type="date" class="form-control" id="floatingInput">
+                                            <label for="floatingInput">Data di nascita*</label>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="red square">
+                            <h3>Dettagli viaggio</h3>
+                                    <form>
+                                        <select class="form-select mb-3" aria-label="Default select example">
+                                            <option disabled selected>Seleziona la classe*</option>
+                                            <option value="1">Economy</option>
+                                            <option value="2">Medium</option>
+                                            <option value="3">First Class</option>
+                                        </select>
+                                        <select class="form-select mb-3" aria-label="Default select example">
+                                            <option disabled selected>Seleziona l'età*</option>
+                                            <option value="1">Minorenne</option>
+                                            <option value="2">Maggiorenne</option>
+                                            <option value="3">Over 65</option>
+                                        </select>
+                                        <div class="form-floating mb-3">
+                                            <input type="text" class="form-control" id="floatingInput" placeholder="Numero di km da percorrere*">
+                                            <label for="floatingInput">Numero di km da percorrere*</label>
+                                        </div>
+                                    </form>
+                                    <div class="buttons">
+                                        <input class="btn ms-btn" type="submit" value="Genera">
+                                        <button type="button" class="btn ms-btn">Annulla</button>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /Ticket Generator Section -->
 
-    <!-- Result -->
-    <h1>Il prezzo del tuo biglietto è ...</h1>
-
-    <script src="js/script.js"></script>
+        <!-- Your Ticket Section -->
+        <div class="ms-container-small">
+            <section class="your-ticket">
+                <h2>Resoconto del tuo biglietto!</h2>
+                <h3 class="text-end">CODICE BIGLIETTO</h3>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="grey square">
+                                <h3>Dati del passeggero</h3>
+                                <div class="pass-name-container">
+                                    <p class="passenger-name">Nome Passeggero <span></span></p>
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="white square">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <div class="smaller-square d-flex flex-column justify-content-around text-center">
+                                                <h5>Classe selezionata</h5>
+                                                <p></p>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="smaller-square d-flex flex-column justify-content-around text-center">
+                                                <h5>Posto</h5>
+                                                <p></p>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="smaller-square d-flex flex-column justify-content-around text-center">
+                                                <h5>Puntifreccia</h5>
+                                                <p></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="qr-code">
+                                <img src="img/qr-code.png" alt="">
+                            </div>
+                            <h4 class="text-center">Mostra questo QR CODE al controllore!</h4>
+                        </div>
+                    </div>
+                </div>
+                <h3 class="text-end">IMPORTO TOTALE PAGATO: </h3>
+            </section>
+        </div>
+         <!-- /Your Ticket Section -->
+    </main>
+    <!-- /MAIN -->
 </body>
 </html>
