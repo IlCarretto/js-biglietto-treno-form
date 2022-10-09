@@ -25,18 +25,13 @@
                     <option value="18">Maggiorenne</option>
                     <option value="minorenne">Minorenne</option>
                     <option value="over65">Over 65</option>
-                </select> -->
+                </select> --> 
                 <!-- Submit -->
             <!-- <div>
                 <button id="submit">Submit</button>
             </div>
             </form>
         </div> -->
-
-        <!-- Result -->
-        <!-- <h1>Il prezzo del tuo biglietto è ...</h1>
-
-        <script src="js/script.js"></script> -->
     </div>
     
     <!-- HEADER -->
@@ -159,27 +154,27 @@
                         <div class="red square">
                             <h3>Dettagli viaggio</h3>
                                     <form>
-                                        <select class="form-select mb-3" aria-label="Default select example">
+                                        <select class="form-select mb-3" id="user-class">
                                             <option disabled selected>Seleziona la classe*</option>
                                             <option value="1">Economy</option>
                                             <option value="2">Medium</option>
                                             <option value="3">First Class</option>
                                         </select>
-                                        <select class="form-select mb-3" aria-label="Default select example">
+                                        <select class="form-select mb-3" id="user-age">
                                             <option disabled selected>Seleziona l'età*</option>
                                             <option value="1">Minorenne</option>
                                             <option value="2">Maggiorenne</option>
                                             <option value="3">Over 65</option>
                                         </select>
                                         <div class="form-floating mb-3">
-                                            <input type="text" class="form-control" id="floatingInput" placeholder="Numero di km da percorrere*">
-                                            <label for="floatingInput">Numero di km da percorrere*</label>
+                                            <input type="text" class="form-control" id="kilometers" placeholder="Numero di km da percorrere*">
+                                            <label for="kilometers">Numero di km da percorrere*</label>
+                                        </div>
+                                        <div class="buttons">
+                                            <input id="submit" class="btn ms-btn" type="submit" value="Genera">
+                                            <button type="button" class="btn ms-btn">Annulla</button>
                                         </div>
                                     </form>
-                                    <div class="buttons">
-                                        <input class="btn ms-btn" type="submit" value="Genera">
-                                        <button type="button" class="btn ms-btn">Annulla</button>
-                                    </div>
                                 </div>
                         </div>
                     </div>
@@ -217,13 +212,13 @@
                                         <div class="col-4">
                                             <div class="smaller-square d-flex flex-column justify-content-around text-center">
                                                 <h5>Posto</h5>
-                                                <p></p>
+                                                <p class="train-spot"></p>
                                             </div>
                                         </div>
                                         <div class="col-4">
                                             <div class="smaller-square d-flex flex-column justify-content-around text-center">
                                                 <h5>Puntifreccia</h5>
-                                                <p></p>
+                                                <p class="train-points"></p>
                                             </div>
                                         </div>
                                     </div>
@@ -238,11 +233,14 @@
                         </div>
                     </div>
                 </div>
-                <h3 class="text-end">IMPORTO TOTALE PAGATO: </h3>
+                <h3 id="final-price" class="text-end">IMPORTO TOTALE PAGATO: </h3>
             </section>
         </div>
          <!-- /Your Ticket Section -->
     </main>
     <!-- /MAIN -->
+
+    <!-- Framework -->
+    <script src="js/script.js"></script>
 </body>
 </html>
