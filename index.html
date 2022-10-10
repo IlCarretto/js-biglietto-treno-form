@@ -118,7 +118,7 @@
                                 <div class="col">
                                     <form>
                                         <div class="form-floating mb-3">
-                                            <input type="text" class="form-control" id="floatingInput" placeholder="Nome*">
+                                            <input type="text" class="form-control name" id="floatingInput" placeholder="Nome*">
                                             <label for="floatingInput">Nome*</label>
                                         </div>
                                         <div class="form-floating mb-3">
@@ -134,7 +134,7 @@
                                 <div class="col">
                                     <form>
                                         <div class="form-floating mb-3">
-                                            <input type="text" class="form-control" id="floatingInput" placeholder="Cognome*">
+                                            <input type="text" class="form-control surname" id="floatingInput" placeholder="Cognome*">
                                             <label for="floatingInput">Cognome*</label>
                                         </div>
                                         <div class="form-floating mb-3">
@@ -155,13 +155,13 @@
                             <h3>Dettagli viaggio</h3>
                                     <form>
                                         <select class="form-select mb-3" id="user-class">
-                                            <option disabled selected>Seleziona la classe*</option>
+                                            <option disabled selected value="">Seleziona la classe*</option>
                                             <option value="economy">Economy</option>
                                             <option value="medium">Medium</option>
                                             <option value="first-class">First Class</option>
                                         </select>
                                         <select class="form-select mb-3" id="user-age">
-                                            <option disabled selected>Seleziona l'età*</option>
+                                            <option disabled selected value="">Seleziona l'età*</option>
                                             <option value="minorenne">Minorenne</option>
                                             <option value="maggiorenne">Maggiorenne</option>
                                             <option value="over65">Over 65</option>
@@ -187,15 +187,14 @@
         <div class="ms-container-small">
             <section class="your-ticket">
                 <h2>Resoconto del tuo biglietto!</h2>
-                <h3 class="text-end">CODICE BIGLIETTO</h3>
+                <h3 class="text-end train-code">CODICE BIGLIETTO</h3>
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-4">
                             <div class="grey square">
                                 <h3>Dati del passeggero</h3>
                                 <div class="pass-name-container">
-                                    <p class="passenger-name">Nome Passeggero <span></span></p>
-                                    <p></p>
+                                    <p class="passenger-name">Nome Passeggero <span class="passenger-age"></span></p>
                                 </div>
                             </div>
                         </div>
@@ -206,7 +205,7 @@
                                         <div class="col-4">
                                             <div class="smaller-square d-flex flex-column justify-content-around text-center">
                                                 <h5>Classe selezionata</h5>
-                                                <p></p>
+                                                <p class="train-class"></p>
                                             </div>
                                         </div>
                                         <div class="col-4">

@@ -31,6 +31,7 @@ submitBtn.addEventListener("click", function () {
     const userAge = userAgeInput.value;
     console.log(userAge, typeof(userAge));
     const userClass = userClassInput.value;
+    console.log(userClass, typeof(userClass));
 
     // Converto i km in euro
     const kmPrice = kmTravelled * 0.21;
@@ -80,7 +81,30 @@ submitBtn.addEventListener("click", function () {
 
     trainPoints.innerHTML = `${value2}`
 
+    // Inserisco codice biglietto casuale
+    let value3 = Math.floor(Math.random() * 10000) +1;
+
+    const trainCode = document.querySelector(".train-code");
+    trainCode.innerHTML += ` ${value3}`
+
+    // Inserisco la classe in HTML
+    // let trainClass = this.querySelector(".train-class")
+    // trainClass.innerHTML = `${userClass}`
+
+    // Inserisco il nome del passeggero
+    const Name = document.querySelector(".name").value;
+    const Surname = document.querySelector(".surname").value;
+    const fullName = Name + " " + Surname;
+    console.log(fullName);
+    const passengerName = document.querySelector(".passenger-name");
+    passengerName.innerHTML = ` ${fullName}`;
+    const passengerAge = document.querySelector(".passenger-age");
+    console.log(passengerAge);
+    // passengerAge.innerHTML = ` ${userAge}`;
+
+
     // Ripulisco gli input
     kmTravelledInput.value = "";
     userAgeInput.value = "";
+    userClassInput.value = "";
 })
