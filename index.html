@@ -103,7 +103,7 @@
                                             <label for="floatingInput">Confirm Email*</label>
                                         </div>
                                         <div class="form-floating mb-3">
-                                            <input type="number" class="form-control" id="floatingInput" placeholder="Codice Fiscale*">
+                                            <input type="text" class="form-control" id="floatingInput" placeholder="Codice Fiscale*">
                                             <label for="floatingInput">Codice Fiscale*</label>
                                         </div>
                                     </form>
@@ -156,25 +156,25 @@
                                     <form>
                                         <select class="form-select mb-3" id="user-class">
                                             <option disabled selected>Seleziona la classe*</option>
-                                            <option value="1">Economy</option>
-                                            <option value="2">Medium</option>
-                                            <option value="3">First Class</option>
+                                            <option value="economy">Economy</option>
+                                            <option value="medium">Medium</option>
+                                            <option value="first-class">First Class</option>
                                         </select>
                                         <select class="form-select mb-3" id="user-age">
                                             <option disabled selected>Seleziona l'età*</option>
-                                            <option value="1">Minorenne</option>
-                                            <option value="2">Maggiorenne</option>
-                                            <option value="3">Over 65</option>
+                                            <option value="minorenne">Minorenne</option>
+                                            <option value="maggiorenne">Maggiorenne</option>
+                                            <option value="over65">Over 65</option>
                                         </select>
                                         <div class="form-floating mb-3">
                                             <input type="text" class="form-control" id="kilometers" placeholder="Numero di km da percorrere*">
                                             <label for="kilometers">Numero di km da percorrere*</label>
                                         </div>
-                                        <div class="buttons">
-                                            <input id="submit" class="btn ms-btn" type="submit" value="Genera">
-                                            <button type="button" class="btn ms-btn">Annulla</button>
-                                        </div>
                                     </form>
+                                    <div class="buttons">
+                                        <input type="submit" id="submit" class="btn ms-btn" value="Genera">
+                                        <button type="button" class="btn ms-btn">Annulla</button>
+                                    </div>
                                 </div>
                         </div>
                     </div>

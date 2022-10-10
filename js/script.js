@@ -37,10 +37,10 @@ submitBtn.addEventListener("click", function () {
     console.log(kmPrice, typeof(kmPrice));
 
     // Sconto il risultato in base all'età
-    if (userAge > 18 ) {
+    if (userAge === "minorenne" ) {
         ticketPrice = kmPrice - (kmPrice * 20 / 100);
         console.log(ticketPrice, typeof(ticketPrice)); 
-    } else if (userAge > 65) {
+    } else if (userAge === "over65") {
         ticketPrice = kmPrice - (kmPrice * 40 / 100);
         console.log(ticketPrice, typeof(ticketPrice));
     } else {
@@ -48,11 +48,18 @@ submitBtn.addEventListener("click", function () {
     }
 
     // Aggiungere +20 euro se medium class, +40 se first class, altrimenti 0
+    if (userClass === "medium") {
+        ticketPrice = ticketPrice + 20;
+    } else if (userClass === "first-class") {
+        ticketPrice = ticketPrice + 40
+    } else {
+        ticketPrice = ticketPrice;
+    }
 
     ticketPrice = Math.round(ticketPrice * 100) / 100;
 
     // Inserisco il valore in h1
-    title.innerHTML = `IMPORTO TOTALE PAGATO ${ticketPrice}!`
+    title.innerHTML = `IMPORTO TOTALE PAGATO $${ticketPrice}!`
     console.log(title.innerHTML);
 
     // Inserisco il posto casuale assegnato
@@ -71,7 +78,7 @@ submitBtn.addEventListener("click", function () {
     const trainPoints = document.querySelector(".train-points");
     console.log(trainPoints);
 
-    trainPoints.innerHTML = `${value}`
+    trainPoints.innerHTML = `${value2}`
 
     // Ripulisco gli input
     kmTravelledInput.value = "";
